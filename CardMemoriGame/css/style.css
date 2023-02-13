@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+}:root{
+    --color1: #e0e0d8;
+    --color2: #bedac3;
+    --color3: #8ebd9d;
+    --color4: #e0bda1;
+    --color5: #9c5d56;
+    --color6: rgba(0, 0, 0, .5);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.content{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: var(--color1);
+    transition: all .2s ease-in-out;
+}
+.field{
+    width: 408px;
+    height: 408px;
+    border: solid 1px var(--color5);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px var(--color6);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    z-index: 99;
+}
+.win{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    height: 0px;
+    width: 0px;
+    z-index: 0;
+    transition: all .5s ease-in-out;
+    border-radius: 50%;
+    background-color: var(--color3);
+}
+.card{
+    height: 90px;
+    width: 90px;
+    border: solid 1px var(--color5);
+    margin: 5px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    transition: all .2s ease;
+    background-color: var(--color2);
+    box-shadow: 0px 0px 5px var(--color3), inset 0px 0px 5px var(--color6);
+}
+.timer{
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    /* left: 50%;
+    transform: translate(-50%, 0); */
+    color: var(--color5);
+    font-family: 'Inter', sans-serif;
+    font-size: 46px;
+    font-weight: bold;
+}
+.message{
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    color: var(--color5);
+    font-size: 45px;
+    font-weight: bold;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    background-color: var(--color6);
+    backdrop-filter: blur(5px);
+    transform-origin: center;
+    /* display: none; */
+    transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.message span{
+    position: absolute;
+    text-align: center;
+    width: 300px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0px 0px 1px var(--color4);
+}
+.message .restart{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+button{
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    border: solid 1px var(--color5);
+    outline: none;
+    background-color: var(--color4);
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color5);
+    transition: all .1s ease-in-out;
+}
+button:hover{
+    background-color: var(--color5);
+    color: var(--color4);
+    border: solid 1px var(--color4);
+}
+.animation{
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+}
+.level{
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    color: var(--color5);
+    font-family: 'Inter', sans-serif;
+    font-size: 46px;
+    font-weight: bold;
+}
